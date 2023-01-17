@@ -3,15 +3,11 @@
 @import "./components/boutons";
 @import "./layouts/header";
 @import "./layouts/footer";
-@import "./pages/accueil";
+@import "./layouts/carteplats";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/variables";
 
-.header {
-    display: flex;
-    box-sizing: border-box;
-    background-color: $colorprimary;
-    color: $colorsecondary;
-    border: 10ch solid $colortertiary;
-    }
+h1 {
+    background-color: $colorsecondary;
+}

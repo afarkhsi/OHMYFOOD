@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --source-map -w scss/main.scss css/styles.css"
+    "sass": "sass --source-map -w scss/main.scss css/styles.css",
+    "sass2": "sass --source-map -w scss/restaurants.scss css/restaurants.css", 
+    "prefix": "postcss css/styles.css --use autoprefixer -d css/prefixed/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.57.1"
-  }
+  },
+  "browserslist": "last 4 versions"
 }
