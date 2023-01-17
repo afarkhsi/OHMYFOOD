@@ -1,9 +1,7 @@
-.header {
-  display: flex;
-  box-sizing: border-box;
-  background-color: #9356DC;
-  color: #FF79DA;
-  border: 10ch solid #99E2D0;
+i {
+  width: 50px;
+  height: 50px;
+  color: aquamarine;
 }
 
 /*# sourceMappingURL=styles.css.map */

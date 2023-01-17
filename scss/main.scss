@@ -8,10 +8,8 @@
 @import "./utils/mixins";
 @import "./utils/variables";
 
-.header {
-    display: flex;
-    box-sizing: border-box;
-    background-color: $colorprimary;
-    color: $colorsecondary;
-    border: 10ch solid $colortertiary;
-    }
+i {
+    width: 50px;
+    height: 50px;
+    color: aquamarine;
+}
