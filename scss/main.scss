@@ -3,7 +3,6 @@
 @import "./components/boutons";
 @import "./layouts/header";
 @import "./layouts/footer";
-@import "./pages/accueil";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/variables";
@@ -12,4 +11,5 @@ i {
     width: 50px;
     height: 50px;
     color: aquamarine;
+    background-color: red;
 }

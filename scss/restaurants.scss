@@ -1,13 +1,1 @@
-@import "./utils/variables";
-@import "./base/base";
-@import "./components/boutons";
-@import "./layouts/header";
-@import "./layouts/footer";
 @import "./layouts/carteplats";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./utils/variables";
-
-h1 {
-    background-color: $colorsecondary;
-}
