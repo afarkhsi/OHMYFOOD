@@ -1,1 +1,13 @@
 // MISE EN PAGE DU BODY DE LA PAGE D'ACCUEIL
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    & > i {
+        padding-right: 1rem;
+    }
+    & > p {
+
+    }
+}

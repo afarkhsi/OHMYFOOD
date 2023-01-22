@@ -1,3 +1,11 @@
-
+.localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.localisation > i {
+  padding-right: 1rem;
+}
 
 /*# sourceMappingURL=accueil.css.map */
