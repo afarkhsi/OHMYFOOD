@@ -1,6 +1,10 @@
 // MISE EN PAGE DE BASE POUR TOUT LE SITE (police etc)
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
 body {
-    max-width: 1400px;
-    margin: auto;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }

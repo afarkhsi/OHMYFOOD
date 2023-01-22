@@ -1,13 +1,99 @@
 // MISE EN PAGE DU BODY DE LA PAGE D'ACCUEIL
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .localisation {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     width: 100%;
-    & > i {
-        padding-right: 1rem;
+    background-color: rgb(230, 228, 228);
+    color: #525252;
+    p {
+        font-weight: 700;
     }
-    & > p {
+}
 
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $colorgrey;
+    gap: 1rem;
+    text-align: center;
+    h1 {
+        margin: 50px 10px 0px 10px;
+        font-weight: 700;
+    }
+    span {
+        margin: 0px 10px 20px 10px;
+        font-weight: 300;
+        font-size: 17px;
+    }
+    button {
+        margin-bottom: 50px;
+    }
+}
+
+.fonctionnement {
+    counter-reset: steps;
+    @include page-dimensions;
+    & ol {
+        display: flex;
+        margin: 0;
+        padding: 0px 20px;
+        list-style: none;
+        justify-content: space-around;
+        gap: 1rem;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+        & li {
+            position: relative;
+            &::before {
+                content: counter(steps);
+                counter-increment: steps;
+                color: #fff;
+                background: $colorprimary;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+                width: 1.5rem;
+                height: 1.5rem;
+                position: absolute;
+                left: -12px;
+                top: 15px;
+            }
+            background-color: $colorgrey;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            flex-grow: 1;
+            transition: transform 300ms;
+            @include button-shadow;
+            @include zoom;
+            & i {
+                color: #838383;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.restaurants {
+    background-color: $colorgrey;
+    & h2, &_cards {
+        @include page-dimensions;
+    }
+    &_cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        >.cards {
+            border: 1px solid red;
+            > a {
+                text-decoration: none;
+                color: black;
+            }
+        }
     }
 }

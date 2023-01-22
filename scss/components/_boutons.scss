@@ -1,0 +1,20 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+button {
+    height: 50px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffff;
+    background-image: linear-gradient($colorsecondary, $colorprimary);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+    @include button-shadow;
+    transition: transform 300ms;
+    &:hover {
+        @include zoom;
+    }
+}
