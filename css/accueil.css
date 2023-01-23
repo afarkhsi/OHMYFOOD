@@ -130,6 +130,10 @@
   text-decoration: none;
   color: black;
   position: relative;
+  transition: transform 400ms ease-in-out;
+}
+.restaurants_cards_card:hover {
+  transform: scale(1.02);
 }
 .restaurants_cards_card img {
   width: 100%;
@@ -143,6 +147,7 @@
 }
 .restaurants_cards_card_description_text {
   padding: 1rem;
+  max-width: 85%;
 }
 .restaurants_cards_card_description_text h3, .restaurants_cards_card_description_text h4 {
   margin: 0;

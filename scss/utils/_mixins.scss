@@ -17,3 +17,24 @@
         opacity: 95%;
     }
 }
+
+@mixin heart-position {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+@mixin heart-transition {
+    color: transparent;
+    background-image: linear-gradient($colorprimary,$colorsecondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: transform 300ms ease-in-out;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.12);
+            cursor: pointer;
+        }
+}

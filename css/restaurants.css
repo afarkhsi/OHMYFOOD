@@ -1,3 +1,106 @@
+header {
+  position: relative;
+}
+header a {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  left: 20px;
+  font-size: 30px;
+}
 
+.banniere {
+  width: 100%;
+}
+.banniere img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 30rem;
+}
+
+.carte {
+  margin: auto;
+  max-width: 1300px;
+  padding: 30px 20px 30px 20px;
+  background-color: #f8f6f6;
+  border-radius: 2rem 2rem 0 0;
+  transform: translateY(-3%);
+}
+.carte_title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  position: relative;
+}
+.carte_title h1 {
+  margin-top: 10px;
+}
+.carte_title i {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-size: 30px;
+  position: absolute;
+  right: 1rem;
+  top: 2px;
+}
+.carte_title .fas {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: transform 300ms ease-in-out;
+}
+.carte_title .fas:hover {
+  opacity: 1;
+  transform: scale(1.12);
+  cursor: pointer;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.menu_detail h2 {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+.menu_detail_cards {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  box-shadow: 2px 4px 14px -9px #000000;
+}
+.menu_detail_cards:hover {
+  box-shadow: 2px 4px 14px -5px #000000;
+}
+.menu_detail_cards_description {
+  margin: 10px 0px 10px 10px;
+}
+.menu_detail_cards_description h3, .menu_detail_cards_description h4 {
+  margin: 0;
+}
+.menu_detail_cards_description h4 {
+  padding-top: 5px;
+  font-weight: 400;
+}
+.menu_detail_cards_price {
+  display: grid;
+  place-items: center;
+}
+
+.commander {
+  display: grid;
+  place-content: center;
+  padding-top: 30px;
+}
+.commander button {
+  padding: 0px 40px 0px 40px;
+}
 
 /*# sourceMappingURL=restaurants.css.map */
