@@ -82,17 +82,80 @@
 
 .restaurants {
     background-color: $colorgrey;
+    padding-bottom: 50px;
     & h2, &_cards {
         @include page-dimensions;
+    }
+    & h2 {
+        padding-top: 60px;
+        padding-bottom: 0px;
     }
     &_cards {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        >.cards {
-            border: 1px solid red;
-            > a {
-                text-decoration: none;
-                color: black;
+        gap: 1rem;
+        padding-top: 20px;
+        @media (max-width:900px) {
+            grid-template-columns: 1fr;
+        }
+        .new::before {
+            content:"Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: $colortertiary;
+            color: darken($color: $colortertiary, $amount: 40%);
+            font-weight: 500;
+            display: grid;
+            place-items: center;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 0.2rem;
+        }
+        &_card {
+            border-radius: 1rem;
+            background-color: #fff;
+            text-decoration: none;
+            color: black;
+            position: relative;
+            & img {
+                width: 100%;
+                height: 12rem;
+                overflow: hidden;
+                object-fit: cover;
+                border-radius: 1rem 1rem 0 0;
+            }
+            &_description {
+                position: relative;
+                &_text {
+                    padding: 1rem;
+                    h3, h4{
+                        margin: 0;
+                    }
+                    h4 {
+                        font-weight: 300;
+                        padding-top: 5px;
+                    }
+                }
+                & i {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1rem;
+                    font-size: 2rem;
+                }
+                .fas {
+                    color: transparent;
+                    background-image: linear-gradient($colorprimary,$colorsecondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: transform 300ms ease-in-out;
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1.12);
+                        cursor: pointer;
+                    }
+                }    
             }
         }
     }

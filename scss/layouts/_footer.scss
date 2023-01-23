@@ -1,0 +1,33 @@
+footer {
+    background-color: #333333;
+    color: #fff;
+    .footer {
+        @include page-dimensions;
+        & h5 {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+        & a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            gap: 0.5rem;
+            margin: 0;
+            margin-bottom: 5px;
+            max-width: 200px;
+            &:hover {
+                text-decoration: wavy;
+            }
+            & .footer_icon {
+                width: 1rem;
+            }
+            i {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
