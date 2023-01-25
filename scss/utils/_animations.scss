@@ -6,3 +6,37 @@
         transform: rotate(0);
     }
 }
+
+@keyframes appear {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-inv {
+    to {
+        transform: rotate(-3600deg);
+    }
+}
+
