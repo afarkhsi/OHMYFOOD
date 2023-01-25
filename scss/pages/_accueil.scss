@@ -39,6 +39,10 @@
 .fonctionnement {
     counter-reset: steps;
     @include page-dimensions;
+    margin-bottom: 10px;
+    & h2 {
+        margin-top: 0px;
+    }
     & ol {
         display: flex;
         margin: 0;
@@ -82,12 +86,12 @@
 
 .restaurants {
     background-color: $colorgrey;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     & h2, &_cards {
         @include page-dimensions;
     }
     & h2 {
-        padding-top: 60px;
+        padding-top: 50px;
         padding-bottom: 0px;
     }
     &_cards {
@@ -119,6 +123,7 @@
             color: black;
             position: relative;
             transition: transform 400ms ease-in-out;
+            @include button-shadow;
             &:hover {
                 transform: scale(1.02);
             }

@@ -37,6 +37,10 @@
   margin: auto;
   max-width: 1300px;
   padding: 30px 20px 30px 20px;
+  margin-bottom: 10px;
+}
+.fonctionnement h2 {
+  margin-top: 0px;
 }
 .fonctionnement ol {
   display: flex;
@@ -58,7 +62,7 @@
   padding: 1rem 2rem;
   flex-grow: 1;
   transition: transform 300ms;
-  box-shadow: 2px 4px 14px -9px #000000;
+  box-shadow: 2px 4px 14px -12px #464646;
 }
 .fonctionnement ol li::before {
   content: counter(steps);
@@ -88,7 +92,7 @@
 
 .restaurants {
   background-color: #f8f6f6;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .restaurants h2, .restaurants_cards {
   margin: auto;
@@ -96,7 +100,7 @@
   padding: 30px 20px 30px 20px;
 }
 .restaurants h2 {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: 0px;
 }
 .restaurants_cards {
@@ -131,6 +135,10 @@
   color: black;
   position: relative;
   transition: transform 400ms ease-in-out;
+  box-shadow: 2px 4px 14px -12px #464646;
+}
+.restaurants_cards_card:hover {
+  box-shadow: 2px 4px 14px -5px #000000;
 }
 .restaurants_cards_card:hover {
   transform: scale(1.02);

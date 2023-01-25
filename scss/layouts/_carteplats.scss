@@ -1,6 +1,7 @@
 // MISE EN PAGE DE LA CARE DES RESTAURANTS
 @import "../utils/mixins";
 @import "../utils/variables";
+@import "../utils/animations";
 
 header {
     position: relative;
@@ -8,8 +9,11 @@ header {
         position: absolute;
         text-decoration: none;
         color: black;
-        left: 20px;
+        left: 10px;
         font-size: 30px;
+        @media (max-width:1000px) {
+            font-size: 20px;
+        }
     }
 }
 
@@ -26,21 +30,27 @@ header {
     @include page-dimensions;
     background-color: $colorgrey;
     border-radius: 2rem 2rem 0 0;
-    transform: translateY(-3%);
+    padding: 30px 0px 0px 0px;
     &_title {
         font-family: 'Shrikhand', sans-serif;
         font-weight: 300;
         font-size: 18px;
         position: relative;
+        background-color: #f8f6f6;
+        border-radius: 2rem 2rem 0 0;
+        transform: translateY(-45%);
+        padding: 25px 0px 30px 0px;
+        margin: -20px -00px;
         & h1 {
             margin-top: 10px;
+            padding: 0 1rem;
         }
         & i {
             @include heart-position;
             font-size: 30px;
             position: absolute;
             right: 1rem;
-            top: 2px;
+            top: 38px;
         }
         .fas {
             @include heart-transition;
@@ -51,33 +61,101 @@ header {
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    transform: translateY(-18%);
+    overflow: hidden;
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        transform: translateY(-6%);
+    }
     &_detail {
+        overflow: hidden;
+        @media (max-width: 1000px) {
+            padding: 0;
+        }
         & h2 {
             font-weight: 300;
-            margin: 1rem 0;
+            margin: 1rem;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 5px;
+            &::after {
+                content:"";
+                position: absolute;
+                height: 3px;
+                width: 40px;
+                background-color: $colortertiary;
+                left: 0px;
+                bottom: 0px;
+            }
         }
         &_cards {
-            display: grid;
-            grid-template-columns: 6fr 1fr;
+            display: flex;
             background-color: #fff;
             border-radius: 1rem;
-            margin: 1rem 0;
+            margin: 1rem;
             @include button-shadow;
+            transition: transform 500ms ease-in-out;
+            height: 70px;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover  {
+                .menu_detail_cards_validator {
+                    background: $colortertiary;
+                    margin-right: 0px;
+                    &_icon {
+                        color: white;
+                        animation: spin 0.7s ease-in-out;
+                    }
+                }
+            }
             &_description {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                margin: 0;
+                justify-content: center;
+                padding: 1rem 0rem 1rem 1rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 h3, h4 {
                     margin: 0;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 h4 {
                     padding-top: 5px;
                     font-weight: 400;
-
                 }
-                margin: 10px 0px 10px 10px;
             }
             &_price {
-                display: grid;
-                place-items: center;
+                display: flex;
+                align-items: flex-end;
+                font-weight: 600;
+                margin-left: auto;
+                padding: 1rem 1rem 0.8rem 1rem;
+                height: 100%;
+                transition-duration: 0.5s;
+            }
+            &_validator {
+                background: transparent;
+                border-radius: 0 1rem 1rem 0;
+                width: 4rem;
+                height: 100%;
+                margin-right: -4rem;
+                transition-duration: 0.5s;
+                overflow: hidden;
+                flex-shrink: 0;
+                &_icon {
+                    display: grid;
+                    place-items: center;
+                    height: 100%;
+                    color: transparent;
+                    font-size: 24px;
+                }
             }
         }
     }
@@ -86,8 +164,11 @@ header {
 .commander {
     display: grid;
     place-content: center;
-    padding-top: 30px;
     & button {
         padding: 0px 40px 0px 40px;
+        transform: translateY(-70%);
+        &:hover {
+            transform: scale(1.02) translateY(-70%);
+        }
     }    
 }
