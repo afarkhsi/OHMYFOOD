@@ -39,7 +39,6 @@ header {
     &_title {
         font-family: 'Shrikhand', sans-serif;
         font-weight: 300;
-        font-size: 18px;
         position: relative;
         background-color: #f8f6f6;
         border-radius: 2rem 2rem 0 0;
@@ -52,10 +51,10 @@ header {
         }
         & i {
             @include heart-position;
-            font-size: 30px;
+            font-size: 24px;
             position: absolute;
-            right: 2rem;
-            top: 33px;
+            right: 1rem;
+            top: 34px;
         }
         .fas {
             @include heart-transition;
