@@ -153,10 +153,6 @@
 .fonctionnement ol li:hover {
   box-shadow: 2px 4px 14px -5px #000000;
 }
-.fonctionnement ol li:hover {
-  transform: scale(1.02);
-  opacity: 95%;
-}
 .fonctionnement ol li i {
   color: #838383;
   margin-right: 10px;
@@ -211,9 +207,6 @@
 }
 .restaurants_cards_card:hover {
   box-shadow: 2px 4px 14px -5px #000000;
-}
-.restaurants_cards_card:hover {
-  transform: scale(1.02);
 }
 .restaurants_cards_card img {
   width: 100%;
